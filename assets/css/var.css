@@ -1,0 +1,21 @@
+:root {
+    /* Colors */
+    --color-primary: #004D40;
+    --color-secondary: #0073AA;
+    --color-light-text: #FBE9E7;
+    --color-white: #ffffff;
+    --color-success: #2e7d32;
+    --color-Gainsboro: #dddddd;
+    --color-light-coral:#FFEB99;
+
+    /* Backgrounds */
+    --bg-body: #f4f4f4;
+    --color-light-bg: #E0F7FA;
+    --bg-success: #e6ffed;
+    --bg-success-small: #4E342E;
+    --bg-submit-small-hover: #2E1F1C; 
+    --bg-submit-hover: #005a8c;
+    --bg-form-medium-viewport: #0000FF;
+    --bg-form-small-viewport: #3E2723; 
+  }
+  

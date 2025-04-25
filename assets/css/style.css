@@ -1,2 +1,3 @@
-@import './root.css';
 @import './media.css';
+@import './var.css';
+@import './root.css';
