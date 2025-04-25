@@ -1,19 +1,13 @@
 <?php
-
 // Prevent direct access to the file.
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Set default values if not defined.
-if ( ! isset( $field_name, $field_label ) ) {
-    $field_name  = 'default_name';
-    $field_label = 'Default Label';
-}
+// Ensure that field_name and field_label are being passed correctly.
+$field_name  = isset( $field_name ) ? $field_name : 'default_name';
+$field_label = isset( $field_label ) ? ( is_array( $field_label ) ? $field_label['label'] : $field_label ) : 'Default Label';
+$field_type  = isset( $field_type ) ? $field_type : 'text'; 
 
-// Render the input field with dynamic type (email or text).
-echo CFP_Input_Field::render(
-    ( 'email' === $field_name ? 'email' : 'text' ),
-    $field_name,
-    $field_label
-);
+// Render the correct input field
+echo CFP_Input_Field::render( $field_type, $field_name, $field_label );

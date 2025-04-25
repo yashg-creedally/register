@@ -6,26 +6,27 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--bg-body);
 }
 
 .form{
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    background-color: #E0F7FA;
-    color: #004D40;
+    background-color: var(--color-light-bg);
+    color: var(--color-primary);
     padding: 1.25rem;
+    border-radius: 1.25rem;
 
     @media (--medium-viewport) {
         padding: 1.5rem;
-        color: #FFEB99;
-        background-color: blue;
+        color: var(--color-light-coral);
+        background-color: var(--bg-form-medium-viewport);
     }
     @media (--small-viewport) {
         padding: 1rem;
-        color: #FBE9E7;
-        background-color: #3E2723;
+        color: var(--color-light-text);
+        background-color: var(--bg-form-small-viewport);
     }
 
     &__field{
@@ -44,7 +45,7 @@ body {
     &__input {
         width: 100%;
         padding: 0.5rem;
-        border: 1px solid #ddd;
+        border: 1px solid var(--color-Gainsboro);
     
         @media (--medium-viewport) {
           padding: 0.6rem;
@@ -56,14 +57,14 @@ body {
       }
 
     &__submit{
-        background-color: #0073AA;
-        color: white;
+        background-color: var(--color-secondary);
+        color: var(--color-white);
         padding: 0.75rem 1.5rem;
         border: none;
         cursor: pointer;
 
         &:hover{
-            background-color: #005a8c;
+            background-color: var(--bg-submit-hover);
 
         }
         @media (--medium-viewport) {
@@ -71,27 +72,24 @@ body {
         }
       
         @media (--small-viewport) {
-            background-color: #4E342E;
-            color: #FBE9E7;
+            background-color: var(--bg-success-small);
+            color: var(--color-light-text);
             padding: 0.5rem 0.75rem;
             font-size: 0.9rem;
 
             &:hover{
-                background-color: #2E1F1C;
+                background-color: var(--bg-submit-small-hover);
             }
         }
     }
 
 }
-.admin__meta-list{
-    display: contents;
-}
+
 .success-message{
-    background-color: #e6ffed;
-    /* border-left: 5px solid #2ecc71; */
+    background-color: var(--bg-success);
     padding: 10px;
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #2e7d32;
+    color: var(--color-success);
 }
